@@ -1,2 +1,0 @@
-# senai
-projetosenai2018
