@@ -36,9 +36,11 @@ public class AlunoTableModel extends AbstractTableModel {
             case 1: {
                 return "Nome";
             }
+            /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
             case 2: {
                 return "Turma";
             }
+            */
             default: {
                 return "";
             }
@@ -58,10 +60,12 @@ public class AlunoTableModel extends AbstractTableModel {
                 valor = umAluno.getNome();
                 break;
             }
+            /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
             case 2: {
                 valor = umAluno.getTurma();
                 break;
-            }          
+            }
+            */
         }
         return valor;
     }   

@@ -116,7 +116,9 @@ public class AlunoController implements ActionListener {
     private void alunoSelecionadoParaEditView() {
         editAlunoView.getTfId().setText(aluno.getId().toString());
         editAlunoView.getTfNome().setText(aluno.getNome());
+        /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
         editAlunoView.getTfTurma().setText(aluno.getTurma());
+        */
     }
 
     private void limparCampos() {
@@ -129,13 +131,17 @@ public class AlunoController implements ActionListener {
 
     private void editViewParaAlunoSelecionado() {
         aluno.setNome(editAlunoView.getTfNome().getText());
+        /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
         aluno.setTurma(editAlunoView.getTfTurma().getText());
+        */
     }
 
     private void novoAlunoView() {
         Aluno umNovoAluno = new Aluno();
         umNovoAluno.setNome(newAlunoView.getTfNome().getText());
+        /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
         umNovoAluno.setTurma(newAlunoView.getTfTurma().getText());
+        */
         AlunoDao dao = new AlunoDaoJDBC();
         dao.salvar(umNovoAluno);
         popularTabela();

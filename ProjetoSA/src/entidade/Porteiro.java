@@ -1,15 +1,12 @@
 package entidade;
 
-public class Aluno {
+public class Porteiro {
     
-    // ID DO ALUNO
+    // ID DO PORTEIRO
     private Integer id;
     
-    // NOME DO ALUNO
+    // NOME DO PORTEIRO
     private String nome;
-    
-    // CURSO DO ALUNO
-    private Curso curso;
 
     public Integer getId() {
         return id;
@@ -26,13 +23,5 @@ public class Aluno {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public Curso getCurso() {
-        return curso;
-    }
-
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
-      
+    
 }

@@ -2,9 +2,16 @@ package entidade;
 
 public class Coordenador {
     
+    // ID DO COORDENADOR
     private Integer id;
+    
+    // NOME DO COORDENADOR
     private String nome;
+    
+    // CURSOS QUE O COORDENADOR ADM ((** PROVAVELMENTE AQUI DEVERÁ SER ADICIONADO O ARRAYLIST **))
     private String curso;
+    
+    // SENHA DO COORDENADOR ((** PROVAVELMENTE SERÁ DESCARTADO PARA QUE POSSAMOS UTILIZAR PERMISSÕES **))
     private String senha;
 
     public Integer getId() {

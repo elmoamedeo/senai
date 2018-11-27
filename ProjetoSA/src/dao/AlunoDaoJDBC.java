@@ -17,6 +17,7 @@ public class AlunoDaoJDBC implements AlunoDao {
                 String query = "INSERT INTO ALUNO (NOME, TURMA) VALUES (?,?)";
                 PreparedStatement ps = conn.prepareStatement(query);
                 ps.setString(1, aluno.getNome());
+                // ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
                 ps.setString(2, aluno.getTurma());
                 ps.executeUpdate();
             } catch (Exception ex) {
@@ -28,6 +29,7 @@ public class AlunoDaoJDBC implements AlunoDao {
                 String query = "UPDATE ALUNO SET NOME = ?, TURMA = ? WHERE IDALUNO = ?";
                 PreparedStatement ps = conn.prepareStatement(query);
                 ps.setString(1, aluno.getNome());
+                // ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
                 ps.setString(2, aluno.getTurma());
                 ps.setInt(3, aluno.getId());
                 ps.executeUpdate();
@@ -61,7 +63,9 @@ public class AlunoDaoJDBC implements AlunoDao {
                 Aluno a = new Aluno();
                 a.setId(rs.getInt("IDALUNO"));
                 a.setNome(rs.getString("NOME"));
+                /* ALTERAÇÃO NECESSÁRIA JÁ QUE O CURSO DEIXOU DE SER UMA SIMPLES STRING E VIROU CLASSE/TABELA
                 a.setTurma(rs.getString("TURMA"));
+                */
                 lista.add(a);
             }
         } catch (Exception ex) {

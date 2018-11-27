@@ -9,7 +9,7 @@ import view.ListCoordenadorView;
 import view.LoginAdminView;
 
 public class AdminController implements ActionListener {
-    // ciao senai sadsdygygy
+    
     private LoginAdminView loginAdmin;
     private ListCoordenadorView listCoord;
     private Admin admin;
